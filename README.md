@@ -35,7 +35,7 @@ https://github.com/ongchinkiat/LyftPerceptionChallenge/releases/download/v0.1/ca
  
 - After that, I made a Class to handle all of the steps to load the data as bathes in the training using data augmentation once and without data augmentation one here is the class. 
   
- ![Class](https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/calass.png?raw=true)
+ <!--![Class](https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/calass.png?raw=true)-->
 
 ## Model Architecture:
 - I used Unet Architecture to train the semantic segmentation model with 13 classes in the final output and make the shape of the images and masks (512, 512) 

@@ -31,7 +31,10 @@ https://github.com/ongchinkiat/LyftPerceptionChallenge/releases/download/v0.1/ca
 
 - I Used Data Augmentation and applied to both masks and images using imageaug library as you can see.
 
-   ![augment](https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/aug.png?raw=true)
+<div align="center">
+    <img src="https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/aug.png?raw=true" alt="augment">
+</div>
+
  
 - After that, I made a Class to handle all of the steps to load the data as bathes in the training using data augmentation once and without data augmentation one here is the class. 
   
@@ -41,7 +44,6 @@ https://github.com/ongchinkiat/LyftPerceptionChallenge/releases/download/v0.1/ca
 - I used Unet Architecture to train the semantic segmentation model with 13 classes in the final output and make the shape of the images and masks (512, 512) 
   
  ![Architecture](https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/u-net-architecture.png?raw=true)
-
 
 ## Evaluation:
 - I used Different approaches to test the performance of the architecture and the model like accuracy, loss, IOU and Dice. here are the two approches that i could see the model doing well and the evaluation on two models the agmentation model and the model without augmentation:

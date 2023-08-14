@@ -1,50 +1,57 @@
 # Semantic-Segmentation-for-Self-Driving-Cars
 
-The goal of this Repo is to use Deepl learning to Make Semantic Segmentation for Self Driving Cars from the Handwritten Digit recognition Dataset. There are 42K of Pictures in the Handwritten Digit recognition collection, which includes 10 classes from 0 to 9. 
+The goal of this Repo is to use Deepl learning to Make Semantic Segmentation for Self Driving Cars from Dataset with Semantic Segmentation Labels generated via via CARLA simulator. There are 5 Categories in the Dataset, which includes 13 classes from 0 to 12. 
 this dataset contains images of HandWritten belonging to 10 different Classes.
 
 ## About Dataset:
-The data files train.csv and test.csv contain gray-scale images of hand-drawn digits, from zero through nine.
-Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255, inclusive.
-The training data set, (train.csv), has 785 columns. The first column, called "label", is the digit that was drawn by the user. The rest of the columns contain the pixel-values of the associated image.
-Each pixel column in the training set has a name like pixelx, where x is an integer between 0 and 783, inclusive. To locate this pixel on the image, suppose that we have decomposed x as x = i * 28 + j, where i and j are integers between 0 and 27, inclusive. Then pixelx is located on row i and column j of a 28 x 28 matrix, (indexing by zero).
-For example, pixel31 indicates the pixel that is in the fourth column from the left, and the second row from the top, as in the ascii-diagram below.
 
-## Goal
-The goal in this competition is to take an image of a handwritten single digit, and determine what that digit is.
-For every in the test set, should predict the correct label.
+### Context:
+This dataset provides data images and labeled semantic segmentations captured via CARLA self-driving car simulator. The data was generated as part of the Lyft Udacity Challenge . This dataset can be used to train ML algorithms to identify semantic segmentation of cars, roads etc in an image.
+
+The data has 5 sets of 1000 images and corresponding labels.
+
+### Content:
+The data set contains sets of RGB and the corresponding semantic segments.
+See link below for details
+http://carla.readthedocs.io/en/latest/cameras_and_sensors/#camera-semantic-segmentation
+
+### Acknowledgements:
+CARLA Self Driving Cars Simulator
+Some of the data come from
+https://github.com/ongchinkiat/LyftPerceptionChallenge/releases/download/v0.1/carla-capture-20180513A.zip
+
 
 ## Installation Instructions:.
-- just download the dataset from this **[Dataset](https://www.kaggle.com/competitions/digit-recognizer/data)** or just download the files in github then download the repo and here you are ready to run the code or you can use the model.h5 instead of all these steps.
+- just download the dataset from this **[Dataset](https://www.kaggle.com/datasets/kumaresanmanickavelu/lyft-udacity-challenge)** then just download repo and here you are ready to run the code or you can use the model.h5 instead of all these steps.
 
 ## Usage Guide:
-- I used the train dataset from the file **train.csv** to get the pixels of the images and convert them to float32.
+- I Split the data into 3 parts: training, test and validation and load the masks with images as you can see how it looks like.
   
  ![dataframe](https://github.com/Bassem-2000/Handwritten-Digit-recognition/blob/main/Digits/dataset.png?raw=true)
 
-- I plot the distribution of the classes to see if there any imbalance in the data but it looks good as you can see
+- I Used Data Augmentation and applied to both masks and images using imageaug library as you can see.
 
    ![Dist](https://github.com/Bassem-2000/Handwritten-Digit-recognition/blob/main/Digits/dist.png?raw=true)
  
-- After that, I used ImageDataGenerator from keras to load the data by applying some data augmentation to the training dataset here is the snippet
+- After that, I made a Class to handle all of the steps to load the data as bathes in the training using data augmentation once and without data augmentation one here is the class. 
   
  ![ImageDataGenerator](https://github.com/Bassem-2000/Handwritten-Digit-recognition/blob/main/Digits/Imagedatagenrator0.png?raw=true)
 
 ## Model Architecture:
-- I used the a simple Architecture by Vanila CNN and my  final model and architecture are done by applying some neurons in last part here is the snippet for the model summary
+- I used Unet Architecture to train the semantic segmentation model with 13 classes in the final output and make the shape of the images and masks (512, 512) 
   
  ![Architecture](https://github.com/Bassem-2000/Handwritten-Digit-recognition/blob/main/Digits/Summary.png?raw=true)
 
 
 ## Evaluation:
-- I used Two approaches to test the performance of the architecture and the model like accuracy and loss. here are the final model performance:
+- I used Different approaches to test the performance of the architecture and the model like accuracy, loss, IOU and Dice. here are the two approches that i could see the model doing well and the evaluation on two models the agmentation model and the model without augmentation:
   
  ![Accuracy](https://github.com/Bassem-2000/Handwritten-Digit-recognition/blob/main/Digits/accu.png?raw=true)
  ![Loss](https://github.com/Bassem-2000/Handwritten-Digit-recognition/blob/main/Digits/LOSSSS.png?raw=true)
 
 
 ## Example:
-- I test the model with a random images and visualize it here you can see the image with the prediction as title and the real image:
+- I test the model with a random images and visualize it here you can see the image with the prediction masks both the augmented model and the ordinary model as title and the real image:
 
  ![Example](https://github.com/Bassem-2000/Handwritten-Digit-recognition/blob/main/Digits/exa.png?raw=true)
 

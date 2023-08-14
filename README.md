@@ -21,7 +21,7 @@ Some of the data come from
 https://github.com/ongchinkiat/LyftPerceptionChallenge/releases/download/v0.1/carla-capture-20180513A.zip
 
 
-## Installation Instructions:.
+## Installation Instructions:
 - just download the dataset from this **[Dataset](https://www.kaggle.com/datasets/kumaresanmanickavelu/lyft-udacity-challenge)** then just download repo and here you are ready to run the code or you can use the model.h5 instead of all these steps.
 
 ## Usage Guide:

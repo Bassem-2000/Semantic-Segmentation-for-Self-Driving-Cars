@@ -1,0 +1,13 @@
+name: image-segmentation-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - opencv
+  - matplotlib
+  - numpy
+  - tensorflow
+  - keras
+  - imgaug
+  - scikit-learn

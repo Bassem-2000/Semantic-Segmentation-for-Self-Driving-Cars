@@ -26,8 +26,10 @@ https://github.com/ongchinkiat/LyftPerceptionChallenge/releases/download/v0.1/ca
 
 ## Usage Guide:
 - I Split the data into 3 parts: training, test and validation and load the masks with images as you can see how it looks like.
-  
- ![img-mask](https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/img-mask.png?raw=true)
+  <div align="center">
+    <img src="https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/img-mask.png?raw=true" alt="img-mask">
+  </div>
+
 
 - I Used Data Augmentation and applied to both masks and images using imageaug library as you can see.
 
@@ -43,13 +45,21 @@ https://github.com/ongchinkiat/LyftPerceptionChallenge/releases/download/v0.1/ca
 ## Model Architecture:
 - I used Unet Architecture to train the semantic segmentation model with 13 classes in the final output and make the shape of the images and masks (512, 512) 
   
- ![Architecture](https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/u-net-architecture.png?raw=true)
+ <div align="center">
+  <img src="https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/u-net-architecture.png?raw=true" alt="Architecture">
+ </div>
+
 
 ## Evaluation:
 - I used Different approaches to test the performance of the architecture and the model like accuracy, loss, IOU and Dice. here are the two approches that i could see the model doing well and the evaluation on two models the agmentation model and the model without augmentation:
+  <div align="center">
+    <img src="https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/eval.png?raw=true" alt="eval1">
+  </div>
   
- ![eval1](https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/eval.png?raw=true)
- ![eval2](https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/eval2.png?raw=true)
+  <div align="center">
+    <img src="https://github.com/Bassem-2000/Semantic-Segmentation-for-Self-Driving-Cars/blob/main/Images/eval2.png?raw=true" alt="eval2">
+  </div>
+
 
 
 ## Example:

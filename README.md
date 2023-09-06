@@ -1,6 +1,6 @@
 # Semantic-Segmentation-for-Self-Driving-Cars
 
-The goal of this Repo is to use Deepl learning to Make Semantic Segmentation for Self Driving Cars from Dataset with Semantic Segmentation Labels generated via via CARLA simulator. There are 5 Categories in the Dataset, which includes 13 classes from 0 to 12. 
+The goal of this Repo is to use Deepl learning to Make Semantic Segmentation for Self Driving Cars from Dataset with Semantic Segmentation Labels generated via via CARLA simulator. There are 5 Categories in the Dataset, which includes 13 classes from 0 to 12.
 this dataset contains images of HandWritten belonging to 10 different Classes.
 
 ## About Dataset:

@@ -1,7 +1,5 @@
 # Semantic-Segmentation-for-Self-Driving-Cars
 
-[![Docker Image CI](https://github.com/Bassem-2000/MaskRCNN-for-Tooth-Dentistry/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/Bassem-2000/MaskRCNN-for-Tooth-Dentistry/actions/workflows/docker-image.yml)
-
 The goal of this Repo is to use Deepl learning to Make Semantic Segmentation for Self Driving Cars from Dataset with Semantic Segmentation Labels generated via via CARLA simulator. There are 5 Categories in the Dataset, which includes 13 classes from 0 to 12.
 this dataset contains images of HandWritten belonging to 10 different Classes.
 
